@@ -2,8 +2,6 @@
 import { NavLink, Route, Switch } from "react-router-dom";
 
 import AboutPage from "./AboutPage";
-import FuelSavingsPage from "./containers/FuelSavingsPage";
-import HomePage from "./HomePage";
 import NotFoundPage from "./NotFoundPage";
 import Programacion from "./programacion/programacion";
 import Podcast from "./podcast/podcast";
@@ -22,22 +20,17 @@ class App extends React.Component {
     return (
       <div>
         <div>
-          <NavLink exact to="/" activeStyle={activeStyle}>Home</NavLink>
-          {' | '}
-          <NavLink to="/fuel-savings" activeStyle={activeStyle}>Demo App</NavLink>
-          {' | '}
-          <NavLink to="/about" activeStyle={activeStyle}>About</NavLink>
+          <NavLink exact to="/" activeStyle={activeStyle}>Streaming</NavLink>
+          {' | '}          
+          <NavLink to="/about" activeStyle={activeStyle}>Quiénes Somos</NavLink>
           {' | '}
           <NavLink to="/Programacion" activeStyle={activeStyle}>Programacion</NavLink>
           {' | '}
           <NavLink to="/Podcast" activeStyle={activeStyle}>Podcast</NavLink>
-          {' | '}
-          <NavLink to="/Streaming" activeStyle={activeStyle}>Streaming</NavLink>
 
         </div>
         <Switch>
-          <Route exact path="/" component={HomePage} />
-          <Route path="/fuel-savings" component={FuelSavingsPage} />
+          <Route exact path="/" component={Streaming} />
           <Route path="/programacion" component={Programacion} />
           <Route path="/podcast" component={Podcast} />
           <Route path="/streaming" component={Streaming} />
